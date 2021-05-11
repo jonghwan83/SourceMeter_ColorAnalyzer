@@ -48,7 +48,6 @@
             this.ZeroCalBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.AbortBtn = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.OpenVoltageBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -276,15 +275,6 @@
             this.AbortBtn.UseVisualStyleBackColor = true;
             this.AbortBtn.Click += new System.EventHandler(this.AbortBtn_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(439, 576);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 12);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "jhjoo.park@samsung.com";
-            // 
             // OpenVoltageBtn
             // 
             this.OpenVoltageBtn.Location = new System.Drawing.Point(12, 33);
@@ -344,14 +334,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 594);
+            this.ClientSize = new System.Drawing.Size(605, 584);
             this.Controls.Add(this.OpenStatus);
             this.Controls.Add(this.SweepBtn);
             this.Controls.Add(this.SweepTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.OpenVoltageBtn);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.AbortBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ZeroCalBtn);
@@ -367,7 +356,7 @@
             this.Controls.Add(this.Logbox);
             this.Controls.Add(this.OpenBtn);
             this.Name = "Form1";
-            this.Text = "TEG tester";
+            this.Text = "TEG tester (Park Jonghwan)";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -396,7 +385,6 @@
         private System.Windows.Forms.Button ZeroCalBtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button AbortBtn;
-        private System.Windows.Forms.Label label3;
         public System.Windows.Forms.DataGridView OutputDataGrid;
         private System.Windows.Forms.Button OpenVoltageBtn;
         private System.Windows.Forms.Label label4;
