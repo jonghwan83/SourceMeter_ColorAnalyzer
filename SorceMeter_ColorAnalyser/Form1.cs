@@ -50,6 +50,7 @@ namespace SourceMeter_ColorAnalyzer
                 sourceMeter.Write(":SOURce:FUNCtion:MODE CURR");
                 //sourceMeter.Write(":SENSe:FUNCtion 'CURRent");
                 sourceMeter.Write(":SENSe:VOLTage:PROTection 150");
+                sourceMeter.Write(":SOURce:CURRent:RANGe:AUTO 1");
                 //sourceMeter.Write(":SENSe:FUNCtion:OFF VOLTage");
                 Logbox.Items.Add("Voltage Protection 150V");
             }
@@ -97,7 +98,7 @@ namespace SourceMeter_ColorAnalyzer
             OutputDataGrid.Columns[5].Name = "x";
             OutputDataGrid.Columns[6].Name = "y";
 
-            OutputDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            //OutputDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         private void TimeTextBox_TextChanged(object sender, EventArgs e)
@@ -396,9 +397,11 @@ namespace SourceMeter_ColorAnalyzer
                 Logbox.Items.Add(sourceMeter.ReadString());
                 isVoltageMode = true;
                 OpenStatus.Text = "Voltage mode!!";
-                // change to current mode
+                
                 sourceMeter.Write(":SOURce:CLEAr:IMMediate");
                 sourceMeter.Write(":SOURce:FUNCtion:MODE VOLT");
+                sourceMeter.Write(":SOURce:VOLTage:RANGe:AUTO 1");
+                sourceMeter.Write(":SENSe:CURRent:PROTection 0.001");
                 Logbox.Items.Add("Voltage Mode");
             }
             catch (Exception ex)
